@@ -107,7 +107,7 @@ class Extensions_Database_Operation_RowBasedTest extends TestCase
                 ['buildOperationQuery', 'buildOperationArguments']
         );
 
-        /* @var $mockOperation PHPUnit_Framework_MockObject_MockObject */
+        /* @var $mockOperation PHPUnit\Framework\MockObject\MockObject */
         $mockOperation->expects($this->at(0))
                 ->method('buildOperationQuery')
                 ->with($connection->createDataSet()->getTableMetaData('table1'), $table1)

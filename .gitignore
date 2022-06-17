@@ -4,3 +4,5 @@
 /build
 /vendor
 /tools
+.phpunit.result.cache
+phpunit-local.xml
