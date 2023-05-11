@@ -148,7 +148,7 @@ class AbstractTable implements ITable
             throw new InvalidArgumentException("The given row ({$row}) does not exist in table {$this->getTableMetaData()->getTableName()}");
         }
 
-        return;
+        return [];
     }
 
     /**

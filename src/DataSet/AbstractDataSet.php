@@ -62,7 +62,7 @@ abstract class AbstractDataSet implements IDataSet
      *
      * @param string $tableName
      *
-     * @return ITable
+     * @return ITable|null
      */
     public function getTable($tableName)
     {
@@ -72,6 +72,8 @@ abstract class AbstractDataSet implements IDataSet
                 return $table;
             }
         }
+
+        return null;
     }
 
     /**

@@ -1,0 +1,5 @@
+parameters:
+    excludes_analyse:
+        - vendor/*
+        - tests/*
+    level: 1
