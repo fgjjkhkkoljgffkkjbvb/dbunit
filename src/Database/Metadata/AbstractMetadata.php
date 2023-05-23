@@ -56,6 +56,7 @@ abstract class AbstractMetadata implements Metadata
     protected $truncateCommand = 'TRUNCATE';
 
     protected array $columns = [];
+    protected array $keys = [];
 
     /**
      * Creates a meta data object based on the driver of given $pdo object and
