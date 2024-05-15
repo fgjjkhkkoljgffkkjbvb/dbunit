@@ -48,7 +48,7 @@ class Extensions_Database_DataSet_AbstractTableTest extends TestCase
         $this->assertEquals($exists, $result);
     }
 
-    public function providerTableContainsRow()
+    public static function providerTableContainsRow()
     {
         return [
             [['id' => 1, 'column1' => 'randomValue'], true],
@@ -83,7 +83,7 @@ class Extensions_Database_DataSet_AbstractTableTest extends TestCase
 
         $table = $this->getMockBuilder(DefaultTable::class)
                       ->setConstructorArgs([$tableMetaData])
-                      ->setMethods(['getRowCount'])
+                      ->onlyMethods(['getRowCount'])
                       ->getMock();
 
         $otherTable->expects($this->once())
@@ -118,7 +118,7 @@ class Extensions_Database_DataSet_AbstractTableTest extends TestCase
 
         $table = $this->getMockBuilder(DefaultTable::class)
                       ->setConstructorArgs([$tableMetaData])
-                      ->setMethods(['getRowCount', 'getValue'])
+                      ->onlyMethods(['getRowCount', 'getValue'])
                       ->getMock();
 
         $otherTable->expects($this->once())
@@ -159,7 +159,7 @@ class Extensions_Database_DataSet_AbstractTableTest extends TestCase
         $this->assertSame($matches, $table->matches($otherTable));
     }
 
-    public function providerMatchesWithColumnValueComparisons()
+    public static function providerMatchesWithColumnValueComparisons()
     {
         return [
 

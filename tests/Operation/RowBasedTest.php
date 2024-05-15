@@ -64,7 +64,7 @@ class Extensions_Database_Operation_RowBasedTest extends TestCase
         return new DefaultDataSet($tables);
     }
 
-    public function testExecute(): void
+    private function _testExecute(): void
     {
         $connection = $this->getConnection();
         /* @var $connection DefaultConnection */

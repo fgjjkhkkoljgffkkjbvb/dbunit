@@ -254,7 +254,7 @@ class Extensions_Database_DataSet_ReplacementTableTest extends \PHPUnit\Framewor
 
         $replacementTable = $this->getMockBuilder(ReplacementTable::class)
                                  ->setConstructorArgs([$table])
-                                 ->setMethods(['getRowCount'])
+                                 ->onlyMethods(['getRowCount'])
                                  ->getMock();
 
         $table->expects($this->once())
@@ -313,7 +313,7 @@ class Extensions_Database_DataSet_ReplacementTableTest extends \PHPUnit\Framewor
 
         $replacementTable = $this->getMockBuilder(ReplacementTable::class)
                                  ->setConstructorArgs([$table])
-                                 ->setMethods(['getRowCount', 'getValue'])
+                                 ->onlyMethods(['getRowCount', 'getValue'])
                                  ->getMock();
 
         $replacementTable->expects($this->any())
@@ -339,7 +339,7 @@ class Extensions_Database_DataSet_ReplacementTableTest extends \PHPUnit\Framewor
         $this->assertSame($matches, $replacementTable->matches($otherTable));
     }
 
-    public function providerMatchesWithColumnValueComparisons()
+    public static function providerMatchesWithColumnValueComparisons()
     {
         return [
 

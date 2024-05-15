@@ -18,9 +18,9 @@ use PDOStatement;
  */
 class Sqlite extends AbstractMetadata
 {
-    protected $columns = [];
+    protected array $columns = [];
 
-    protected $keys = [];
+    protected array $keys = [];
 
     protected $truncateCommand = 'DELETE FROM';
 
